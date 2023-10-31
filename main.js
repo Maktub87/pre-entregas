@@ -1,6 +1,9 @@
 
+//Hola profe trate de agregar todo lo visto en base a mi idea , como vi que todos hacian calculadora subasta y venta de productos trate de hacer algo diferente espero sirva , y sino me esforzare mas para la proxima pre-entrega con alguna idea nueva. Muchas gracias //
 
 
+
+let respuestasCorrectas = 0
 
 function nombreUsuario() {
         let bienvenido = prompt("Ingresa tu nombre")
@@ -17,8 +20,9 @@ function nombreUsuario() {
 function preguntasBasicas() {
         let pregunta1 = prompt("1-¿Cual es el nombre completo de messi?")
 
-        if (pregunta1 == "andres lionel messi") {
-                alert("tu respuesta es correcta 👌")
+        if (pregunta1.toLowerCase() === "andres lionel messi") {
+                alert("Tu respuesta es correcta 👌")
+                respuestasCorrectas++
         } else {
                 alert("no rey de que planeta venís?😖")
         }
@@ -26,6 +30,7 @@ function preguntasBasicas() {
         let pregunta2 = prompt("2-¿En que club debutó?")
         if (pregunta2 == "barcelona") {
                 alert("Al parecer algo sabes 🤣😂")
+                respuestasCorrectas++
 
         } else {
                 alert("Segui participando rey 👻")
@@ -34,6 +39,7 @@ function preguntasBasicas() {
         let pregunta3 = prompt("3-¿Quien es su idoló?")
         if (pregunta3 == "pablo aimar") {
                 alert("Excelente ⚽🏆")
+                respuestasCorrectas++
         } else {
                 alert("Mmmm... creo que no te gusta el futbol ")
         }
@@ -70,25 +76,28 @@ function susTitulos() {
         } while (identificar)
 }
 
+function mostrarResultado() {
+        alert(`Respondiste ${respuestasCorrectas} preguntas correctamente.`);
+}
 
 
-function subasta(){
-alert("Por ultimo estamos subastando una camiseta autografiada por el goat ")
-let ofertaBase = 40000
+function subasta() {
+        alert("Por ultimo estamos subastando una camiseta autografiada por el goat ")
+        let ofertaBase = 40000
 
 
-let ofertaDelUsuario = parseInt( prompt("ingresa tu oferta"))
-if (ofertaDelUsuario < 20000) {
-        
-        alert("olvidate, tu oferta es muy baja rey")
-} else if (ofertaDelUsuario < 30000 && ofertaDelUsuario > 20000) {
-        
-        alert("La firma del 10 vale un poco más")
-} else if (ofertaDelUsuario > 40000 ) {
-        
-        
-        alert("es aceptable asique en breve coordinamos los detalles de entrega ")
-} 
+        let ofertaDelUsuario = parseInt(prompt("ingresa tu oferta"))
+        if (ofertaDelUsuario < 20000) {
+
+                alert("olvidate, tu oferta es muy baja rey")
+        } else if (ofertaDelUsuario < 30000 && ofertaDelUsuario > 20000) {
+
+                alert("La firma del 10 vale un poco más")
+        } else if (ofertaDelUsuario > 40000) {
+
+
+                alert("es aceptable asique en breve coordinamos los detalles de entrega ")
+        }
 
 }
 
@@ -100,6 +109,8 @@ if (ofertaDelUsuario < 20000) {
 nombreUsuario()
 
 preguntasBasicas()
+
+mostrarResultado()
 
 susTitulos()
 
